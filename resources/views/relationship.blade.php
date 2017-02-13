@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Relaciones</title>
+        <title>Relaciones pruebas</title>
     </head>
     <body>
         @foreach($categories as $category)
