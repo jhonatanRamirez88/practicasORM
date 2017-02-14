@@ -11,11 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-	$categories = App\Category::whereHas('books', function($query){
-		$query->where('status','public');
-	})->get();
-    return view('relationship', compact('categories'));
+// Route::get('/', function () {
+// 	$categories = App\Category::whereHas('books', function($query){
+// 		$query->where('status','public');
+// 	})->get();
+//     return view('relationship', compact('categories'));
+// });
+
+Route::get('/', function (){
+	$users = App\User::all();
+	return view('manytomany', compact('users'));
 });
 
 Route::delete('destroy', function(Illuminate\Http\Request $request) {

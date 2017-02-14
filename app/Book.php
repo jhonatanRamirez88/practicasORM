@@ -13,4 +13,8 @@ class Book extends Model
     public function Category(){
       return $this->belongsTo(Category::class);
     }
+
+    public function users(){
+      return $this->belongsToMany(User::class);
+    }
 }
